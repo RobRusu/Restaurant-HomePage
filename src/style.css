@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background: url('./Background3.jpg');
+  background-size: 50%;
+  --fries: #F4C63E;
+  --ketchup: #BB2B1B;
+  --border: #DF9D00;
+}
+
+@font-face {
+  font-family: 'Titles';
+  src: url('./Titles.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Contents';
+  src: url('./Contents.ttf');
+}
+
+header {
+  box-shadow: 0 5px 5px var(--ketchup);
+}
+
+.title {
+  font-family: 'Titles';
+  height: 7vh;
+  font-size: 5rem;
+  text-align: center;
+  background-color: var(--fries);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--ketchup);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--fries);
+  padding: 2vh;
+}
+
+.headerBtn {
+  padding: 1vh 4vw;
+  background-color: var(--ketchup);
+  color: white;
+  font-weight: bold;
+  border: 0.5vh solid var(--border);
+  border-radius: 5px;
+  font-family: 'Contents';
+  font-size: 2vh;
+  &:hover{
+    cursor: pointer;
+    background-color: #992316;
+    /* background-image: url('./Splash.png');
+    background-repeat: no-repeat;
+    background-size: 100%; */
+  }
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0;
+  position: relative;
+}
+
+.content {
+  width: min(100rem, 90%);
+  background-color: var(--fries);
+  text-align: center;
+  padding: 0 4vw 4vh 4vw;
+  border-radius: 10px;
+  border: 0.5vh solid var(--border);
+}
+
+.heading {
+  height: 30%;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  font-family: 'Titles';
+  font-size: 2vh;
+}
+
+.titleHome {
+  height: 30%;
+  font-size: 3.5vh;
+  font-weight:600;
+  margin-bottom: 2vh;
+}
+
+.schedule {
+  font-size: 3vh;
+  padding-bottom: 1vh;
+  font-weight: 600;
+}
+
+.drinks,
+.drink,
+.dish,
+.desserts,
+.dessert {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  position: relative;
+}
+
+.drink:nth-child(odd),
+.dish:nth-child(odd),
+.dessert:nth-child(odd){
+  margin: 0 0 0 2vw;
+}
+
+.drink:nth-child(even),
+.dish:nth-child(even),
+.dessert:nth-child(even){
+  margin: 0 2vw 0 0;
+}
+
+.dishes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2vw;
+}
+
+.drinks,
+.dishes,
+.desserts {
+  margin: 0 2vw;
+}
+
+img {
+  width: 60%;
+  border: 0.5rem solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px var(--ketchup);
+}
+
+.menu {
+  padding: 1vh 1vw;
+  border: 1vh solid var(--border);
+  background-color: var(--ketchup);
+  color: white;
+  font-weight: bold;
+  margin: 2vh 2vw;
+  font-size: 3vh;
+  border-radius: 50px;
+  box-shadow: 0 10px 5px var(--ketchup);
+  font-family: 'Titles';
+}
+
+#content > .content > p:nth-child(1) {
+  margin: 2vh 0;
+  padding: 1vh 1vw;
+  font-size: 6vh;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Contents';
+  font-size: 1.7vh;
+}
+
+.description > p:nth-child(1) {
+  font-size: 2vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.contact {
+  border: 1vh solid var(--border);
+  background-color: var(--ketchup);
+  color: white;
+  font-weight: bold;
+  border-radius: 2vh;
+  font-family: 'Titles';
+}
+
+.contacts > p {
+  margin: 0 2vw 1vh 2vw;
+  text-align: center;
+  border: 0.5vh solid var(--border);
+  padding: 1vh 1vw;
+  background-color: var(--ketchup);
+  color: white;
+  font-weight: bold;
+  border-radius: 1vh;
+  font-family: 'Contents';
+  font-size: 1.5vh;
+}
+
+.hours {
+  background-color: var(--ketchup);
+  border: 1vh solid var(--border);
+  color: white;
+  padding: 1vh;
+  font-size: 2vh;
+  border-radius: 10px;
+  font-family: 'Contents';
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  width: min(61rem, 80%);
+}
+
+footer {
+  background-color: var(--fries);
+  text-align: center;
+  padding: 2vh;
+  font-family: 'Contents';
+  font-size: 2vh;
+  position: absolute;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.drink > img + p,
+.dish > img + p,
+.dessert > img + p {
+  position: absolute;
+  bottom: 1vh;
+  left: 1vh;
+  color: white;
+  font-size: 1vh;
+}
